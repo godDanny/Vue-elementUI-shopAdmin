@@ -1,28 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- 显示匹配的组件 -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import axios from 'axios'; 每次使用都导入比较麻烦  原型链-实例上的属性
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  name: "app",
+  mounted() {
+    // 调用axios的get请求   返回promise,promise中有then方法
+    // this.axios.get("https://api.github.com/users").then(res => {
+    //   console.loog(res);
+    // });
+
+    //请求数据 测试用
+    // this.$axios.get('https://api.github.com/users').then(res => {
+    //   console.log(res.data);
+    // });
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
