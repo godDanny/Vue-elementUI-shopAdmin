@@ -38,7 +38,7 @@
           </div>
           <div class="layout-nav">
             <MenuItem name="1">
-              <Icon type="ios-contact"></Icon>Admin
+              <Icon type="ios-contact"></Icon>Exit
             </MenuItem>
           </div>
         </Menu>
@@ -46,9 +46,9 @@
       <Content :style="{padding: '0 16px 16px'}">
         <!-- 面包屑导航 -->
         <Breadcrumb separator=">" :style="{margin: '20px 0 20px 20px'}">
-          <BreadcrumbItem to="/">Home</BreadcrumbItem>
-          <BreadcrumbItem to="/components/breadcrumb">Components</BreadcrumbItem>
-          <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
+        <BreadcrumbItem to="/">Home</BreadcrumbItem>
+        <BreadcrumbItem to="/components/breadcrumb">Components</BreadcrumbItem>
+        <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
         </Breadcrumb>
 
         <!-- 添加/删除/选择/搜索 -->
@@ -56,7 +56,7 @@
           <div class="action-nav">
             <div class="add-del">
               <Button type="success" class="add-item">Addtion</Button>
-              <Button type="error" class="del-item">Delete</Button>
+              <Button type="error" class="del-item">Theme</Button>
             </div>
             <div class="nav-right">
               <Select v-model="model1" style="width:200px" class="nav-select">
@@ -77,20 +77,24 @@
         </template>
         <!-- 商品信息卡片 -->
         <Card>
-          <div style="height: 350px">
+          <div style="height: 350px" >
             <template>
-              <Table border ref="selection" :columns="columns7" :data="data6"></Table>
+              <Table border ref="selection" :columns="columns7" :data="data6">
+              </Table>
             </template>
-          </div>
-        </Card>
-      </Content>
-
-      <!-- 分页器 -->
+             <!-- 分页器 -->
       <div class="paging">
         <template>
           <Page :total="40" size="small" show-elevator show-sizer/>
         </template>
       </div>
+          </div>
+          
+        </Card>
+       
+      </Content>
+
+      
     </Layout>
   </div>
 </template>
@@ -177,7 +181,7 @@ export default {
                     }
                   }
                 },
-                "View"
+                "Editor"
               ),
               h(
                 "Button",
@@ -234,7 +238,8 @@ export default {
     handleSelectAll(status) {
       this.$refs.selection.selectAll(status);
     }
-  }
+  },
+   
 };
 </script>
 
@@ -281,7 +286,7 @@ export default {
   float: left;
   background-color: inherit;
   /* width:400px; */
-  margin-right: 280px;
+  margin-right: 250px;
 }
 .add-del .del-item {
   margin-left: 20px;
@@ -296,7 +301,7 @@ export default {
 
 /* 分页器 */
 .paging {
-  margin: 20px 0 36px 40px;
+  margin: 20px 0 0px 20px;
 }
 
 .layout-header-bar {

@@ -106,8 +106,8 @@ body .login {
   width: 400px;
   height: 300px;
   border-radius: 10px;
-  /* background-color: rgb(220,200,150); */
-  background-color: #ccc;
+  background-color: rgb(220,200,150);
+  /* background-color: #ccc; */
 
   padding: 20px 50px;
 }

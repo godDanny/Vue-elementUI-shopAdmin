@@ -20,6 +20,8 @@ import Admin from "./pages/Admin.vue";
 Vue.use(iview);
 Vue.use(VueRouter);
 
+// 给每次axios 请求自动添加一个域名
+axios.defaults.baseURL = 'https://localhost:8899';
 // 把 axios 绑定到vue实例的属性$axios
 Vue.prototype.$axios = axios;
 

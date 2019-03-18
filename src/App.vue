@@ -20,6 +20,10 @@ export default {
     // this.$axios.get('https://api.github.com/users').then(res => {
     //   console.log(res.data);
     // });
+
+    this.$axios.get("/admin/account/islogin").then(res=>{
+      
+    })
   }
 };
 </script>
